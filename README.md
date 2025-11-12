@@ -12,7 +12,7 @@ lutional neural network with co-teaching for remote sensing image classification
 ## II. PROPOSED MODEL FOR RS IMAGE DA
 The flow diagram of EDG-GCN is shown in Fig. 1. In the first step, a Resnet-50 feature extractor with the series of fifty convolutional and pooling layers is applied on input image to obtain the informative features. EDG is applied on the feature vector and each feature vector is represented with its membership to the domain granule within a class. These domain granulated features are passed through the ensemble of
 classifiers to generate pseudo label of the feature vector. Based on this pseudo label, the elements of affinity matrix in GCN are defined and furthermore, GCN is used to label the feature vector. The detailed architecture of EDG-GCN is shown in Fig.2. In Fig. 2, a Resnet-50 feature extractor with three layers of
-
+![Alt Text](https://github.com/SayyadRahiaman/Linked-Generative-Adversarial-Networks-for-Vector-Map-Generation-using-Remote-Sensing-Images-/blob/main/Picture1.jpg)
 Fig. 1: Functional block diagram of EDG-GCN
 convolutional and pooling layers (as an example) is applied on input image to obtain a feature vector of dimension 1×4. This feature vector is passed through the ensemble of classifiers to generate pseudo label. The concept of co-teaching is applied in GCN by defining the elements of affinity matrix based on the pseudo label. Here, GCN is trained based on the batch gradient descent method and furthermore, EDG feature vector is labeled.
 ## A.	Evolving Domain Granulation
